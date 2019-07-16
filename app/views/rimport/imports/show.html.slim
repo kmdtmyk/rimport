@@ -1,4 +1,5 @@
-h1 root#index
+
+div= @import.file.filename
 
 ruby:
   internal_tables = %w(schema_migrations ar_internal_metadata)
@@ -9,3 +10,5 @@ form
     - tables.sort.each do |table|
       option selected=(params[:table] == table) = table
   button type='submit' submit
+
+pre= @import.file.download

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
 Rimport::Engine.routes.draw do
-  root 'root#index'
+
+  resources :imports, path: '/'
+
 end

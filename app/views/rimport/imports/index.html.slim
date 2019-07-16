@@ -1,0 +1,12 @@
+div= link_to '新規作成', new_import_path
+
+table
+  thead
+    tr
+      th ファイル名
+      th 日時
+  tbody
+    - @imports.each do |import|
+      tr
+        td= link_to import.file.filename, import
+        td= format_datetime import.created_at
