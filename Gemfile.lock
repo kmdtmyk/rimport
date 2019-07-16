@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     rimport (0.1.0)
-      rails (~> 5.2.3)
+      rails (>= 5.0.0)
       slim (~> 4.0, >= 4.0.1)
 
 GEM
