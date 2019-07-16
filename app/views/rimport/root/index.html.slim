@@ -1,1 +1,11 @@
 h1 root#index
+
+ruby:
+  internal_tables = %w(schema_migrations ar_internal_metadata)
+  tables = ActiveRecord::Base.connection.tables - internal_tables
+
+form
+  select name='table'
+    - tables.sort.each do |table|
+      option selected=(params[:table] == table) = table
+  button type='submit' submit
